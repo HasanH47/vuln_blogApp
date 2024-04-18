@@ -3,6 +3,39 @@
 include("db.php");
 session_start();
 
+// if (isset($_GET['id'])) {
+//   $post_id = $_GET['id'];
+
+//   $sql = "SELECT posts.id, posts.title, posts.content, posts.created_at, users.username as author
+//             FROM posts
+//             JOIN users ON posts.author_id = users.id
+//             WHERE posts.id = ?";
+//   $stmt = $conn->prepare($sql);
+
+//   $stmt->bind_param("i", $post_id);
+
+//   $stmt->execute();
+
+//   $result = $stmt->get_result();
+
+//   if ($result->num_rows > 0) {
+//     $post = $result->fetch_assoc();
+
+//     $commentSql = "SELECT * FROM comments WHERE post_id = ? ORDER BY created_at DESC";
+//     $commentStmt = $conn->prepare($commentSql);
+//     $commentStmt->bind_param("i", $post_id);
+//     $commentStmt->execute();
+//     $commentResult = $commentStmt->get_result();
+//   } else {
+//     echo "Post not found.";
+//   }
+
+//   $stmt->close();
+//   if (isset($commentStmt)) {
+//     $commentStmt->close();
+//   }
+// }
+
 if (isset($_GET['id'])) {
   $post_id = $_GET['id'];
   $sql = "SELECT posts.id, posts.title, posts.content, posts.created_at, users.username as author
