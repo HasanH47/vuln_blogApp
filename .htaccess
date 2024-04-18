@@ -1,0 +1,6 @@
+# RedirectMatch 403 /\.git
+
+# <FilesMatch "^.*\.git.*">
+#    Order allow,deny
+#    Deny from all
+# </FilesMatch>

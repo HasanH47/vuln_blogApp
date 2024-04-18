@@ -37,6 +37,8 @@ include_once("includes/header.php");
   <h2>Comments:</h2>
   <?php while ($comment = $commentResult->fetch_assoc()) : ?>
     <div>
+      <!-- html entities -->
+      <!-- <p><?php echo htmlspecialchars($comment['content']); ?></p> -->
       <p><?php echo $comment['content']; ?></p>
       <p>By: <?php echo $comment['username']; ?> - <?php echo $comment['created_at']; ?></p>
     </div>
@@ -50,7 +52,7 @@ include_once("includes/header.php");
       <label for="comment">Leave a Comment:</label>
       <textarea name="comment" rows="4" cols="50" required></textarea>
       <br>
-      <input type="submit" name="comment" value="Submit Comment">
+      <input type="submit" name="submit_comment" value="Submit Comment">
     </form>
   <?php else : ?>
     <p>Login to leave a comment.</p>

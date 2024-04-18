@@ -29,6 +29,7 @@
             </li>
           <?php endif; ?> -->
           <li class="nav-item">
+            <!-- <a href="edit_profile.php" class="nav-link">Edit Profile</a> -->
             <a href="edit_profile.php?id=<?php echo $_SESSION['user_id']; ?>" class="nav-link">Edit Profile</a>
           </li>
           <li class="nav-item">

@@ -3,7 +3,7 @@
 include("db.php");
 session_start();
 
-if (isset($_POST['comment'])) {
+if (isset($_POST['submit_comment'])) {
   $post_id = $_POST['post_id'];
   $comment = $_POST['comment'];
   $username = $_SESSION['username'];
